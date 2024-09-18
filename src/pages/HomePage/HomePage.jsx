@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getTrendingMovie } from "../../../getMovie";
+import { getTrendingMovie } from "../../../getMovies";
 import MovieList from "../../components/MovieList/MovieList";
 import { toast, ToastContainer } from "react-toastify";
 import { Circles } from "react-loader-spinner";

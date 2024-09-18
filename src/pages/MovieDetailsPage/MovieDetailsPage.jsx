@@ -6,7 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getMovieDetail } from "../../../getMovie";
+import { getMovieDetail } from "../../../getMovies";
 import style from "./MovieDetailsPage.module.css";
 import clsx from "clsx";
 import { Circles } from "react-loader-spinner";
@@ -28,15 +28,15 @@ export default function MovieDetailsPage() {
     async function fetchMovieDetails() {
       setLoading(true);
       setError(null);
-      //   try {
-      //     const data = await getMovieDetail(movieId);
-      //     setMovie(data);
-      //   } catch (error) {
-      //     setError("Error fetching movie details.");
-      //     toast.error("Error fetching movie details.");
-      //   } finally {
-      //     setLoading(false);
-      //   }
+      try {
+        const data = await getMovieDetail(movieId);
+        setMovie(data);
+      } catch (error) {
+        setError("Error fetching movie details.");
+        toast.error("Error fetching movie details.");
+      } finally {
+        setLoading(false);
+      }
     }
 
     fetchMovieDetails();

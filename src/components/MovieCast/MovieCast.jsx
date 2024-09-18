@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getMovieCast } from "../../../getMovie";
+import { getMovieCast } from "../../../getMovies";
 import style from "./MovieCast.module.css";
 import { Circles } from "react-loader-spinner";
 

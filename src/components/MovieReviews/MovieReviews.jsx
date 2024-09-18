@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getReviews } from "../../../getMovie";
+import { getReviews } from "../../../getMovies";
 import style from "./MovieReviews.module.css";
 import { Circles } from "react-loader-spinner";
 
